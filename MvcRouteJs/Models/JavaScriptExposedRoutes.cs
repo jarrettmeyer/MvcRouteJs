@@ -1,25 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace MvcRouteJs.Models
 {
-    public class JavaScriptExposedRoutes : IEnumerable<KeyValuePair<string, string>>
+    public class JavaScriptExposedRoutes
     {
         private readonly Dictionary<string, string> routeDictionary = new Dictionary<string, string>();
 
         public void Add(string name, string url)
         {
             routeDictionary.Add(name, url);
-        }
-
-        public IEnumerator<KeyValuePair<string, string>> GetEnumerator()
-        {
-            return routeDictionary.GetEnumerator();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
         }
 
         public string ToJavaScriptString()
