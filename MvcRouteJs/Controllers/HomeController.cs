@@ -16,7 +16,8 @@ namespace MvcRouteJs.Controllers
 
         public ActionResult Version()
         {
-            return PartialView("_Version");
+            var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            return Json(new { version }, JsonRequestBehavior.AllowGet);            
         }
     }
 }
