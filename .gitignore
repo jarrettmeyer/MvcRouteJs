@@ -1,7 +1,7 @@
-.dotCover
-.suo
-.user
+*.dotCover
+*.suo
+*.user
 
 bin/
 obj/
-_ReSharper.*
+_ReSharper.*/
