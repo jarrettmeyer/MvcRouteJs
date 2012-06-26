@@ -6,7 +6,7 @@ namespace MvcRouteJs.Controllers
     public class RoutesController : Controller
     {
         private static bool hasInitializedRoutes = false;
-        private static Routes routes;
+        private static JavaScriptExposedRoutes routes;
 
         public ActionResult Index()
         {
@@ -25,7 +25,7 @@ namespace MvcRouteJs.Controllers
             // instance (this.Url) is not static.
             if (!hasInitializedRoutes)
             {
-                routes = new Routes();
+                routes = new JavaScriptExposedRoutes();
                 routes.Add("about_url", Url.Action("About", "Home"));
                 routes.Add("home_url", Url.Action("Index", "Home"));
                 routes.Add("version_url", Url.Action("Version", "Home"));

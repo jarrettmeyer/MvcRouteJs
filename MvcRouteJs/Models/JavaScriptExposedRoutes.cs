@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MvcRouteJs.Models
 {
-    public class Routes : IEnumerable<KeyValuePair<string, string>>
+    public class JavaScriptExposedRoutes : IEnumerable<KeyValuePair<string, string>>
     {
         private readonly Dictionary<string, string> routeDictionary = new Dictionary<string, string>();
 
